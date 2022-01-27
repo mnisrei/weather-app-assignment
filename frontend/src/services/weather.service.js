@@ -1,7 +1,7 @@
 import axios from "axios";
 export const fetchWeather = async (id) => {
     try {
-        const res = axios.post("http://localhost:3001/weather/current-weather", { city_id: id })
+        const res = axios.post(`${process.env.REACT_APP_BASEURL}/current-weather`, { city_id: id })
         return res
     }
     catch (error) {
@@ -10,7 +10,7 @@ export const fetchWeather = async (id) => {
 }
 export const fetchWeatherForecast = async (id) => {
     try {
-        const res = axios.post("http://localhost:3001/weather/forecast-weather", { city_id: id })
+        const res = axios.post(`${process.env.REACT_APP_BASEURL}/forecast-weather`, { city_id: id })
         return res
     }
     catch (error) {
