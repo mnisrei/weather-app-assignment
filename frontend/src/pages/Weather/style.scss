@@ -1,0 +1,66 @@
+@import "../../index.scss";
+.weatherWrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    @media only screen and (max-width: 500px) {
+        height: 100%;
+        h1 {
+            font-size: 24px;
+        }
+    }
+    .dropdown {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 50px !important;
+    }
+    .buttonStyled {
+        background: $primary-color;
+        font-size: 1.2rem;
+        color: white;
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        &:active {
+            transform: scale(0.8);
+        }
+    }
+    .weatherWrapper-current {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 40%;
+    }
+    .weatherWrapper-forecast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 10px;
+        .buttonWrapper-forecast {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+            margin: 20px 0px;
+        }
+        .weatherCardWrapper-forecast {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+    }
+}
